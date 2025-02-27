@@ -5,7 +5,7 @@ export const NotFoundPage: React.FC = () => {
   return (
     <div className={styles.notFoundPage}>
       <div className={styles.back}>
-        <Link to="/">
+        <Link to="/#/">
           <div className={styles.backContainer}>
             <img
               className={styles.arrowIcon}
