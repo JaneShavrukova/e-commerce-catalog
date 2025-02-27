@@ -1,0 +1,31 @@
+@use '@styles/globals/variables' as *;
+
+.burger {
+  display: none;
+  z-index: 1001;
+
+  @media (max-width: $mobile-breakpoint) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid transparent;
+    border-left: 1px solid $color-elements;
+  }
+}
+
+.image {
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active,
+  &:focus {
+    transform: none;
+  }
+}

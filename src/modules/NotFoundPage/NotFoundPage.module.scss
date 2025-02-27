@@ -1,0 +1,43 @@
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/typography' as *;
+@use '@styles/globals/layout' as *;
+
+.notFoundPage {
+  @include flex-center;
+
+  flex-direction: column;
+  gap: 20px;
+}
+
+.back {
+  @include flex-center;
+  @include small-text-desktop-tablet;
+
+  color: $color-secondary;
+  font-size: 14px;
+}
+
+.backContainer {
+  @include flex-center;
+
+  gap: 8px;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(90deg);
+}
+
+.notFoundMessage {
+  @include h1-desktop-tablet;
+
+  @media (max-width: $mobile-breakpoint) {
+    @include h1-mobile;
+  }
+}
+
+.notFoundImg {
+  width: 100%;
+  max-width: 400px;
+}

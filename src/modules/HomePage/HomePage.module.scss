@@ -1,0 +1,43 @@
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/typography' as *;
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 80px;
+  overflow: hidden;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-bottom: 56px;
+  }
+}
+
+.mainTitle {
+  @include h1-desktop-tablet;
+
+  margin: 56px 0;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 32px 24px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    @include h2-desktop-tablet;
+
+    margin: 24px 16px;
+  }
+}

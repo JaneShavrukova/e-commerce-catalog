@@ -1,0 +1,9 @@
+@use '@styles/globals/typography' as *;
+@use '@styles/globals/mixins' as *;
+
+.addToCart {
+  flex-grow: 1;
+
+  @include buttons-text-desktop-tablet;
+  @include primary-button;
+}

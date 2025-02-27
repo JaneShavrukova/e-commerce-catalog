@@ -1,0 +1,141 @@
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/layout' as *;
+@use '@styles/globals/typography' as *;
+@use '@styles/globals/mixins' as *;
+
+.error {
+  @include flex-center;
+
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+
+  @include h1-desktop-tablet;
+
+  @media (max-width: $mobile-breakpoint) {
+    & {
+      @include h1-mobile;
+    }
+  }
+}
+
+.reloadButton {
+  width: 200px;
+  height: 50px;
+
+  @include buttons-text-desktop-tablet;
+  @include primary-button;
+}
+
+.notFoundProducts {
+  @include flex-center;
+
+  flex-direction: column;
+  flex: 1;
+  gap: 50px;
+}
+
+.notFoundMessage {
+  @include h1-desktop-tablet;
+
+  @media (max-width: $mobile-breakpoint) {
+    & {
+      @include h1-mobile;
+    }
+  }
+}
+
+.notFoundProductsImage {
+  width: 300px;
+  height: 300px;
+}
+
+.back {
+  @include flex-center;
+
+  gap: 8px;
+}
+
+.catalogPage {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  @media (max-width: $tablet-breakpoint) {
+    & {
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    & {
+      padding: 16px;
+    }
+  }
+}
+
+.categoryTitle {
+  @include h1-desktop-tablet;
+
+  margin-top: 40px;
+  margin-bottom: 0;
+
+  @media (max-width: $mobile-breakpoint) {
+    & {
+      @include h1-mobile;
+
+      margin-top: 24px;
+    }
+  }
+}
+
+.numOfProducts {
+  @include body-text-desktop-tablet;
+
+  color: $color-secondary;
+  margin-top: 8px;
+}
+
+.productsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(229px, 1fr));
+  gap: 40px 16px;
+  margin-top: 24px;
+}
+
+.productsControls {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  width: 100%;
+  height: 59px;
+  margin-top: 40px;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 32px;
+  }
+}
+
+.sortContainer {
+  width: 176px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 187px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 50%;
+  }
+}
+
+.itemOnPageContainer {
+  width: 128px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 136px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 50%;
+  }
+}

@@ -1,21 +1,20 @@
-import React from 'react';
-import './App.scss';
+/* eslint-disable max-len */
+import { Header } from './modules/shared/components/Header';
+import { Main } from 'modules/shared/components/Main';
+import { Footer } from './modules/shared/components/Footer/Footer';
+import { MenuProvider } from 'contexts/MenuContext/MenuContext';
+import { ProductsProvider } from 'contexts/ProductsContext/ProductsContext';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+export const App: React.FC = () => (
+  <MenuProvider>
+    <ProductsProvider>
+      <div className="App">
+        <Header />
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+        <Main />
 
-export const App: React.FC = () => {
-  return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
-    </div>
-  );
-};
+        <Footer />
+      </div>
+    </ProductsProvider>
+  </MenuProvider>
+);

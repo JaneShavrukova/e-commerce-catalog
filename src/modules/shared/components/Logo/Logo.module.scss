@@ -1,0 +1,5 @@
+@use '@styles/globals/layout' as *;
+
+.logo {
+  @include flex-center;
+}

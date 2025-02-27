@@ -1,0 +1,38 @@
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/typography' as *;
+
+.container {
+  max-width: 1136px;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  @include h2-desktop-tablet;
+
+  margin: 0 0 24px;
+
+  @media (max-width: $mobile-breakpoint) {
+    @include h2-mobile;
+
+    margin: 0 0 16px;
+  }
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+
+  @media (max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

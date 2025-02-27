@@ -1,0 +1,30 @@
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/layout' as *;
+@use '@styles/globals/typography' as *;
+@use '@styles/globals/mixins' as *;
+
+.backToTopBlock {
+  @include flex-center;
+
+  justify-content: flex-end;
+}
+
+.text {
+  @include small-text-desktop-tablet;
+
+  cursor: pointer;
+  padding-right: 16px;
+}
+
+.button {
+  @include flex-center;
+
+  background-color: $color-surface2;
+  border: none;
+
+  height: 32px;
+  width: 32px;
+  transform: rotate(90deg);
+
+  @include hover-icons($color-icons);
+}

@@ -1,0 +1,121 @@
+@use '@styles/globals/layout' as *;
+@use '@styles/globals/variables' as *;
+@use '@styles/globals/typography' as *;
+
+.container {
+  @include flex-center;
+
+  flex-direction: column;
+  max-width: 1136px;
+}
+
+.topWrapper {
+  @include flex-center;
+
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 16px;
+  }
+}
+
+.navButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.sliderButtonPrev,
+.sliderButtonNext {
+  cursor: pointer;
+
+  @include flex-center;
+
+  flex-direction: row;
+  background-color: $color-surface2;
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.5s ease-in-out;
+
+  &.sliderButtonPrev {
+    background-image: url('/img/icons/arrow-back-white.svg');
+  }
+
+  &.sliderButtonNext {
+    background-image: url('/img/icons/arrow-back-white.svg');
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: $color-icons;
+  }
+}
+
+.lockedButton,
+.lockedButton:hover {
+  pointer-events: none;
+  background-color: $color-surface1;
+  border: 1px solid $color-elements;
+
+  &.sliderButtonPrev {
+    background-image: url('/img/icons/arrow-down-light-gray.svg');
+    transform: rotate(90deg);
+  }
+
+  &.sliderButtonNext {
+    background-image: url('/img/icons/arrow-down-light-gray.svg');
+    transform: rotate(-90deg);
+  }
+}
+
+.title {
+  @include h2-desktop-tablet;
+
+  margin: 0 0 24px;
+
+  @media (max-width: $mobile-breakpoint) {
+    @include h2-mobile;
+
+    margin: 0 0 16px;
+    width: 136px;
+  }
+}
+
+.swiper {
+  display: flex;
+  flex-direction: row;
+  width: 1136px;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-left: 24px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-left: 16px;
+  }
+}
+
+.swiperSlide {
+  @include flex-center;
+
+  flex-direction: row;
+  width: 272px;
+  height: 506px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 237px;
+    height: 512px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 212px;
+    height: 439px;
+  }
+}
