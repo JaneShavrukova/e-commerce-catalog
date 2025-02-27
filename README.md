@@ -7,6 +7,12 @@ The project follows best practices in **component structuring, styling with CSS 
 
 🔗 [Live Preview](https://janeshavrukova.github.io/e-commerce-catalog/)
 
+## 🖼 Design Reference
+The project follows a provided [Figma mockup](https://www.figma.com/design/BUusqCIMAWALqfBahnyIiH/Phone-catalog-(V2)-Original-Dark?node-id=0-1&p=f&t=WH42Gsonre3DE8me-0),, ensuring:
+- A clean and modern layout with an intuitive user experience.
+- Full responsiveness, adapting to mobile, tablet, and desktop screens.
+- Accessibility best practices to enhance usability for all users.
+
 ## 🛠 Technologies Used
 
 - ⚛️ React + TypeScript
@@ -25,8 +31,6 @@ The project follows best practices in **component structuring, styling with CSS 
 - **Featured Products** – highlights products with discounts.
 - **Category Navigation** – quick access to different product categories (`Phones`, `Tablets`, `Accessories`).
 
----
-
 ### **Product Catalog**
 - **Category Pages** – separate pages for `phones`, `tablets`, and `accessories` with dedicated filtering and sorting.
 - **Sorting Options** – users can sort products by:
@@ -35,8 +39,6 @@ The project follows best practices in **component structuring, styling with CSS 
   - Price (low to high, high to low)
 - **Responsive Design** – fully adapted for desktop, tablet, and mobile devices.
 
----
-
 ### **Global State Management**
 - **Context API** – centralized state management for efficient app performance.
 - **`ProductsContext`** – manages:
@@ -44,8 +46,6 @@ The project follows best practices in **component structuring, styling with CSS 
   - Loading and error handling
   - Global product filtering and sorting
 - **Minimized API Calls** – ensures optimal performance by avoiding unnecessary re-fetching.
-
----
 
 ### **Routing & Error Handling**
 - **`react-router-dom`** – client-side navigation with dynamic routes.
@@ -61,29 +61,18 @@ The project follows best practices in **component structuring, styling with CSS 
 - **Product Gallery** – multiple product images with a zoom feature.
 - **"You May Also Like" Section** – dynamically suggests similar products.
 
----
-
 ### **Pagination**
 - Implement pagination for a better user experience when browsing large product lists.
-
----
 
 ### **Shopping Cart**
 - **Add/Remove Products** – allow users to manage items in their cart.
 - **Cart Quantity Display** – show the number of items in the cart in the header.
 - **Persistent Cart** – store cart data in `localStorage` to retain items between sessions.
 
----
-
 ### **Favorites (Wishlist)**
 - **Add/Remove Favorite Items** – users can mark products as "favorites."
 - **Favorite Counter** – display the number of favorite items in the header.
 - **Persistent Data** – store favorite items in `localStorage`.
-
----
-
-### **Search Functionality**
-- Implement a global search feature to quickly find products.
 
 ---
 
@@ -95,6 +84,8 @@ The project follows best practices in **component structuring, styling with CSS 
 ---
 
 🔥 **The project is actively evolving, and new features will be added in future updates!** 🚀
+
+---
 
 ## 🚀 Getting Started
 
@@ -119,5 +110,3 @@ npm start
 
 ## ⚙️ Requirements
 - Node.js >= 20.0.0
-
----
